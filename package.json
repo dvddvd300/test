@@ -49,9 +49,6 @@
     "vite-tsconfig-paths": "^4.3.1",
     "wrangler": "^3.28.1"
   },
-  "engines": {
-    "node": ">=18"
-  },
   "sideEffects": false,
   "lint-staged": {
     "*.{js,mjs,ts,tsx,css,md,yml}": "prettier --write"
