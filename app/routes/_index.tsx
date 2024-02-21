@@ -1,15 +1,12 @@
 import type { LoaderFunctionArgs } from '@remix-run/cloudflare';
 import { json, useLoaderData } from '@remix-run/react';
 import { Markdown } from '~/components';
-import { getFileContentWithCache } from '~/services/github.server';
 import { parse } from '~/services/markdoc.server';
 
 export async function loader({ context }: LoaderFunctionArgs) {
-	const content = await getFileContentWithCache(context, 'README.md');
-
 	return json(
 		{
-			content: parse(content),
+			content: '',
 		},
 		{
 			headers: {
